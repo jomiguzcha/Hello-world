@@ -12,8 +12,8 @@ int main(){
 		z=1;
 		while(z<=a){
          		if(a%z==0){
-            			cant_mult+=1;
-        			z+=1;}
+            			cant_mult+=1;}
+        			z+=1;
     		}
     
 	    	if(cant_mult==2){
