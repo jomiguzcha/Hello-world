@@ -13,15 +13,9 @@ int main(){
     d=x%10;x/=10;
     e=x%10;x/=10;
 
+    (a==e) && (b==d)?cout<<"El numero es palindromo":cout<<"El numero NO es palindromo";
 
-    if(a==e and b==d){
-        cout<<"El numero es palindromo";
-    }
-    else{
-        cout<<"El numero NO es palindromo";
-    }
-
-	
-	
 	return 0;
 	}
+
+
