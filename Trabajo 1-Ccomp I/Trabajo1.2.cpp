@@ -3,8 +3,7 @@
 using namespace std;
 
 void sucesion(int n,int x=1)
-{
-   while(x<=n){
+{   while(x<=n){
 		cout<<x;
 		if(x!=n){
 			cout<<",";
