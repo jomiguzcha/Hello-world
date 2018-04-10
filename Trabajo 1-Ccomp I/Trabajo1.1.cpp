@@ -2,14 +2,15 @@
 
 using namespace std;
 
-int main(){
-	int edad;
+void edad(int n)
+{
+    n<=0?cout<<"La edad es de un no nacido":n>=18?cout<<"La edad es de un mayor de edad":cout<<"La edad es de un menor de edad";
 
-	cout<<"Dame la edad: ";cin>>edad;
-
-	edad<=0?cout<<"La edad es de un no nacido":edad>=18?cout<<"La edad es de un mayor de edad":cout<<"La edad es de un menor de edad";
-
-
-	return 0;
 }
 
+int main(){
+    int n;
+    cout<<"Dame tu edad: ";cin>>n;
+	edad(n);
+	return 0;
+}
