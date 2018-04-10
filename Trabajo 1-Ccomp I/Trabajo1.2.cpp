@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int sucesion(int n,int x=1)
+void sucesion(int n,int x=1)
 {
    while(x<=n){
 		cout<<x;
