@@ -8,7 +8,7 @@ void sucesion(int n,int x=1)
 		if(x!=n){
 			cout<<",";
 		}
-		x+=1;
+		x++;
 	}
 
 }
