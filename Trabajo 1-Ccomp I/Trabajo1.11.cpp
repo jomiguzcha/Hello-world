@@ -1,21 +1,21 @@
-#include <iostream>
+#import<iostream>
 
 using namespace std;
 
-int main(){
-	int i,fact=1,numero;
-
-	cout<<"Dame un numero: ";cin>>numero;
-	
-	if(numero<=0){
-		cout<<"NO existe el factorial";
-	} 
+int factorial(int n){
+	if(n==1){
+		return 1;}
 	else{
-	    for (i = 1; i <= numero; i++){
-	        fact*=i;
-	    }
-	}
-	cout<<"Factorial de "<<numero<<" es "<<fact;
-		
+		return n*factorial(n-1);}
+}
+
+int main(){
+	int fact=0,n;
+	
+	cout<<"Dame el numero: ";cin>>n;
+	fact=factorial(n);
+	
+	cout<<"El factorial del numero es :"<<fact;
+	
 	return 0;
 }
