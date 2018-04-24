@@ -1,46 +1,47 @@
 #include <iostream>
 
 using namespace std;
-int suma_iterativa(const int array[],int lenght,int suma=0,int i=0){
-    for(int i=0;i<lenght;i++){
-        suma+=array[i];}
+
+int suma(int arr[],int lenght)
+{   int suma=0;
+    for(int i=0;i<lenght;i++)
+        suma+=arr[i];
     return suma;}
 
-int suma_recursiva(const int array[],int lenght,int suma=0,int i=0){
-    if(lenght==0){
+int suma_recursiva(int arr[],int lenght,int suma=0)
+{     if (lenght==0){
         return 0;}
-    else{
-        suma=array[lenght-1]+suma_recursiva(array,lenght-1);}
-    return suma;}
-
-int invertir(int array[],int lenght){
-    if(lenght%2==0){
-       for(int i=0;i<=(lenght/2);i++){
-            int c=0;
-            c=array[i];array[i]=array[lenght-i];array[lenght-i]=c;}
-    }
+      else{
+        return suma=arr[lenght-1]+suma_recursiva(arr,--lenght);}
 
 }
 
-int tamano(char x){
+void copia(int arr1[],int arr2[],int lenght)
+{   for (int i=0;i<lenght;i++){
+        arr2[i]=arr1[i];
+        cout<<arr2[i];}
+}
 
+void copia_recursivo(int arr1[],int arr2[],int lenght)
+{    if(lenght==0){
+        return;}
+    arr2[lenght-1]=arr1[lenght-1];
+    copia_recursivo(arr1,arr2,lenght-1);
 }
 
 
-int main(){
-    int n;
-    cout<<"Longitud de la lista: ";cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cout<<"Elemento"<<i<<" :";cin>>arr[i];}
 
-    cout<<suma_iterativa(arr,n)<<endl;
-    cout<<suma_recursiva(arr,n)<<endl;
-    cout<<invertir(arr,n);
+int main()
+{   int l1[]={1,2,3,4};
+    int l2[]={5,6,7,8};
+    copia_recursivo(l1,l2,4);
+    for (int i=0;i<4;i++){
+           cout<<l2[i];}
 
-
+    /*char a[]={'h','e','l','l','o','\0'};
+    char b[]="hello";
+    cout<<b<<endl;*/
 
     return 0;
 }
-
 
