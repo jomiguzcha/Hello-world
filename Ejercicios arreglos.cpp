@@ -23,11 +23,9 @@ void invertir(int array[],int lenght){
            array[lenght-i]=c;}
     }
 
-/*int tamano(char arr){
-    int lenght=0;
-    while(arr[lenght]!='\0'){
-        lenght+=1;}
-    return lenght;}*/
+int tamano(char arr[]){
+    for(int lenght=0;arr[lenght]!='\0';lenght++)
+    return lenght;}
 
 
 void copia(char arr1[],char arr2[],int lenght)
@@ -35,6 +33,11 @@ void copia(char arr1[],char arr2[],int lenght)
         arr2[i]=arr1[i];}
 }
 
+void concatenar(char arr1[],char arr2[],char arr3[40]){
+
+
+
+}
 
 int main()
 {   int l1[]={1,2,3,4};
@@ -42,11 +45,10 @@ int main()
     char l3[]="hola";
     char l4[]="abcd";
 
-    //tamano(l3);
+    tamano(l3);
 
     for (int i=0;i<4;i++){
         cout<<l3[i];}
-
 
     return 0;
 }
