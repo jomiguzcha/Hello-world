@@ -13,16 +13,21 @@ int suma_recursiva(int arr[],int lenght,int suma=0)
         return 0;}
       else{
         return suma=arr[lenght-1]+suma_recursiva(arr,--lenght);}
-
 }
 
-int invertir(int array[],int lenght){
+void invertir(int array[],int lenght){
        for(int i=1;i<=(lenght/2);i++){
              int c=0;
             c=array[i-1];
            array[i-1]=array[lenght-i];
            array[lenght-i]=c;}
     }
+
+/*int tamano(char arr){
+    int lenght=0;
+    while(arr[lenght]!='\0'){
+        lenght+=1;}
+    return lenght;}*/
 
 
 void copia(char arr1[],char arr2[],int lenght)
@@ -37,12 +42,11 @@ int main()
     char l3[]="hola";
     char l4[]="abcd";
 
-    copia(l3,l4,4);
+    //tamano(l3);
 
     for (int i=0;i<4;i++){
-        cout<<l4[i];}
+        cout<<l3[i];}
 
 
     return 0;
 }
-
