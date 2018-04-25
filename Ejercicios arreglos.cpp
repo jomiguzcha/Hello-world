@@ -39,16 +39,32 @@ void concatenar(char arr1[],char arr2[],char arr3[40]){
 
 }
 
+char *strcat(char arr1[],char arr2[])
+  {
+    char *p;char *q;
+
+    for (q = arr1; *q != '\0'; q++)
+       ;
+
+    for(p = arr2; *p != '\0'; p++, q++)
+       *q = *p;
+
+    *q = '\0';
+
+    return arr1;
+  }
+
 int main()
 {   int l1[]={1,2,3,4};
     int l2[]={5,6,7,8};
     char l3[]="hola";
     char l4[]="abcd";
 
-    tamano(l3);
+    cout<<strcat(l3,l4);
 
-    for (int i=0;i<4;i++){
-        cout<<l3[i];}
+//    for (int i=0;i<4;i++){
+  //      cout<<l3[i];}
 
     return 0;
 }
+
