@@ -24,13 +24,13 @@ int invertir(int array[],int lenght){
            array[lenght-i]=c;}
     }
 
-void copia(int arr1[],int arr2[],int lenght)
+
+void copia(char arr1[],char arr2[],int lenght)
 {   for (int i=0;i<lenght;i++){
-        arr2[i]=arr1[i];
-        cout<<arr2[i];}
+        arr2[i]=arr1[i];}
 }
 
-void copia_recursivo(int arr1[],int arr2[],int lenght)
+void copia_recursivo(char arr1[],char arr2[],int lenght)
 {    if(lenght==0){
         return;}
     arr2[lenght-1]=arr1[lenght-1];
@@ -38,15 +38,17 @@ void copia_recursivo(int arr1[],int arr2[],int lenght)
 }
 
 
-
 int main()
 {   int l1[]={1,2,3,4};
     int l2[]={5,6,7,8};
-    copia_recursivo(l1,l2,4);
-    for (int i=0;i<4;i++){
-           cout<<l2[i];}
+    char l3[]="hola";
+    char l4[]="abcd";
 
-  
+    copia_recursivo(l3,l4,4);
+
+    for (int i=0;i<4;i++){
+        cout<<l4[i];}
+
 
     return 0;
 }
