@@ -30,13 +30,6 @@ void copia(char arr1[],char arr2[],int lenght)
         arr2[i]=arr1[i];}
 }
 
-void copia_recursivo(char arr1[],char arr2[],int lenght)
-{    if(lenght==0){
-        return;}
-    arr2[lenght-1]=arr1[lenght-1];
-    copia_recursivo(arr1,arr2,lenght-1);
-}
-
 
 int main()
 {   int l1[]={1,2,3,4};
@@ -44,7 +37,7 @@ int main()
     char l3[]="hola";
     char l4[]="abcd";
 
-    copia_recursivo(l3,l4,4);
+    copia(l3,l4,4);
 
     for (int i=0;i<4;i++){
         cout<<l4[i];}
