@@ -16,6 +16,14 @@ int suma_recursiva(int arr[],int lenght,int suma=0)
 
 }
 
+int invertir(int array[],int lenght){
+       for(int i=1;i<=(lenght/2);i++){
+             int c=0;
+            c=array[i-1];
+           array[i-1]=array[lenght-i];
+           array[lenght-i]=c;}
+    }
+
 void copia(int arr1[],int arr2[],int lenght)
 {   for (int i=0;i<lenght;i++){
         arr2[i]=arr1[i];
@@ -38,9 +46,7 @@ int main()
     for (int i=0;i<4;i++){
            cout<<l2[i];}
 
-    /*char a[]={'h','e','l','l','o','\0'};
-    char b[]="hello";
-    cout<<b<<endl;*/
+  
 
     return 0;
 }
