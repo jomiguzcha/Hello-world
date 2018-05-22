@@ -1,5 +1,6 @@
 #include <iostream>
 #include "arregloenteros.h"
+#include <stdlib.h>
 
 using namespace std;
 
