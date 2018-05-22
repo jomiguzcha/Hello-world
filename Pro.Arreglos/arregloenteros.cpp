@@ -1,4 +1,5 @@
 #include "arregloenteros.h"
+#include <stdlib.h>
 
 void Arreglo::anadir(int x){
 	arr2 = new int[len+1];
@@ -15,7 +16,7 @@ void Arreglo::anadir(int x){
     delete[]arr2;
 }
 
-void Arreglo::extraer(int x){
+void Arreglo::eliminar(int x){
 	int pos=0;
 	for(int i=0;i<len;i++){
 		if(arr[i]==x){
