@@ -10,8 +10,8 @@ class Arreglo
 		int *arr,*arr2,len=0;
 	
 	public:
-		Arreglo(int l[],int lenght){
-			*arr=l[0];
+		Arreglo(int lenght){
+			arr=new int[lenght];
 			len=lenght;}
 		
 		void anadir(int x);
