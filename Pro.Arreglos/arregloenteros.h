@@ -1,24 +1,26 @@
-#ifndef ARREGLOENTEROS_H
-#define ARREGLOENTEROS_H
+#include <iostream>
+#ifndef ARREGLO_H
+#define ARREGLO_H
 #include <stdlib.h>
 
 using namespace std;
 
-
 class Arreglo
-{	private:
-		int *arr,*arr2,len=0;
-	
-	public:
+{	public:
+	    int *arr,*arr2,len=0;
+
 		Arreglo(int lenght){
 			arr=new int[lenght];
 			len=lenght;}
-		
+        ~Arreglo(){
+            delete[]arr;
+            delete[]arr2;}
+
 		void anadir(int x);
 		void eliminar(int x);
 		void vaciar();
-		
+        void imprimir();
+
 };
 
-#endif
-
+#endif // ARREGLO_H
