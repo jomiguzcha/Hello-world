@@ -9,7 +9,7 @@ int main() {
 	Arreglo a1([1,2,3],3);
 	
 	a1.anadir(4);
-	a1.extraer(3);
+	a1.eliminar(3);
 	a1.vaciar();
 	
 	return 0;
