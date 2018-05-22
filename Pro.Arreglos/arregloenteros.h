@@ -1,5 +1,6 @@
 #ifndef ARREGLOENTEROS_H
 #define ARREGLOENTEROS_H
+#include <stdlib.h>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ class Arreglo
 			len=lenght;}
 		
 		void anadir(int x);
-		void extraer(int x);
+		void eliminar(int x);
 		void vaciar();
 		
 };
