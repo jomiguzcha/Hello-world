@@ -1,12 +1,15 @@
-#include "arregloenteros.h"
+#include <iostream>
+#include "Arreglo.h"
 #include <stdlib.h>
+
+using namespace std;
 
 void Arreglo::anadir(int x){
 	arr2 = new int[len+1];
     for(int i=0;i<len;i++){
        	arr2[i]=arr[i];}
     delete[]arr;
-    
+
 	len++;
     arr2[len-1]=x;
 
@@ -14,6 +17,7 @@ void Arreglo::anadir(int x){
     for(int i=0;i<len;i++)
     	arr[i]=arr2[i];
     delete[]arr2;
+
 }
 
 void Arreglo::eliminar(int x){
@@ -21,32 +25,37 @@ void Arreglo::eliminar(int x){
 	for(int i=0;i<len;i++){
 		if(arr[i]==x){
 			pos=i;}}
-    if(pos==0){
-    	return "El elemento no esta en lista";}
-    else{
-    	arr[pos]=0;
-    	arr2 = new int[len-1];
-    	for(int i=0;i<len-1;i++){
-    		if(arr[i]==0){
-    			break;}
-       		arr2[i]=arr[i];}
-       	for(int i=pos+1;i<len-1;i++){
-       		arr2[i-1]=arr[i];}
-       	delete[]arr;
-       	
-       	len--;
 
-    	arr=new int[len];
-    	for(int i=0;i<len;i++)
-    		arr[i]=arr2[i];
-    	delete[]arr2;
+    arr[pos]=0;
+    arr2 = new int[len-1];
+    for(int i=0;i<len-1;i++){
+        if(arr[i]==0){
+            break;}
+        arr2[i]=arr[i];}
+    for(int i=pos+1;i<len-1;i++){
+        arr2[i-1]=arr[i];}
+    delete[]arr;
 
-    }
+    len--;
+
+    arr=new int[len];
+    for(int i=0;i<len;i++)
+        arr[i]=arr2[i];
+    delete[]arr2;
+
 }
 
 void Arreglo::vaciar(){
-	delete[] arr;
+	delete[]arr;
 	arr=new int[1];
 	arr[0]=0;
+	len=1;
+
 }
 
+void Arreglo::imprimir(){
+    for(int i=0;i<len;i++){
+        cout<<arr[i]<<endl;}
+    cout<<endl;
+
+}
