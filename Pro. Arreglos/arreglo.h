@@ -11,14 +11,13 @@ class Arreglo
 
 		Arreglo(int lenght){
 			arr=new int[lenght];
-			//for(int i=0;i<lenght;i++){
-				//arr[i]=l[i];}
 			len=lenght;}
 
         ~Arreglo(){
             delete[]arr;
             delete[]arr2;}
 
+        void iniciar();
 		void anadir(int x);
 		void insertar(int pos,int x);
 		void eliminar(int pos);
@@ -27,4 +26,4 @@ class Arreglo
 
 };
 
-#endif 
+#endif
