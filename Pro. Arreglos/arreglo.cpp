@@ -4,11 +4,16 @@
 
 using namespace std;
 
+void Arreglo::iniciar(){
+    for(int i=0;i<len;i++){
+        cout<<"Elemento de la posicion "<<i<<" : ";cin>>arr[i];}
+}
+
 void Arreglo::anadir(int x){
 	arr2 = new int[len+1];
     for(int i=0;i<len;i++){
        	arr2[i]=arr[i];}
-    delete[]arr;            
+    delete[]arr;
 
 	len++;
     arr2[len-1]=x;
@@ -25,7 +30,7 @@ void Arreglo::insertar(int pos,int x){
     	if(i==pos){
     		break;}
        	arr2[i]=arr[i];}
-    
+
     for(int i=pos+1;i<=len;i++){
     	arr2[i]=arr[i-1];}
     delete[]arr;
@@ -37,7 +42,7 @@ void Arreglo::insertar(int pos,int x){
     	arr[i]=arr2[i];
     delete[]arr2;
 }
-              
+
 
 void Arreglo::eliminar(int pos){
 	arr2 = new int[len-1];
@@ -45,17 +50,17 @@ void Arreglo::eliminar(int pos){
     	if(i==pos){
     		break;}
        	arr2[i]=arr[i];}
-    
+
     for(int i=pos;i<len-1;i++){
     	arr2[i]=arr[i+1];}
     delete[]arr;
-    
+
     len--;
-    
+
 	arr=new int[len];
     for(int i=0;i<len;i++)
     	arr[i]=arr2[i];
-    delete[]arr2;         
+    delete[]arr2;
 }
 
 void Arreglo::vaciar(){
