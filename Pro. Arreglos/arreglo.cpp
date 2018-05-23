@@ -74,5 +74,74 @@ void Arreglo::vaciar(){
 void Arreglo::mostrar(){
     for(int i=0;i<len;i++){
         cout<<arr[i]<<"\t";}
-    cout<<endl;
+    cout<<endl;}
+
+int Arreglo::mayor(){
+    int may=0;
+    for(int i=0;i<len;i++){
+        if(arr[i]>may){
+            may=arr[i];}}
+    return may;
+}
+
+int Arreglo::menor(){
+    int men=arr[0];
+    for(int i=0;i<len;i++){
+        if(arr[i]<men){
+            men=arr[i];}}
+    return men;
+}
+
+float Arreglo::promedio(){
+    float prom=0;
+    for(int i=0;i<len;i++){
+        prom+=arr[i];}
+    prom/=len;
+    return prom;
+}
+
+bool Arreglo::esPrim(int pos){
+    int i=1,cant_mult=0;
+    while(i<=arr[pos]){
+        !(arr[pos]%i)?cant_mult+=1:cant_mult=cant_mult;
+        i++;}
+    if(cant_mult>2){
+        return false;}
+    else{
+        return true;}
+}
+
+int Arreglo::mayor_prim(){
+    int may=0;
+    for(int i=0;i<len;i++){
+        if(esPrim(arr[i])==true){
+            if(arr[i]>may){
+                may=arr[i];}}
+    }
+    return may;
+}
+
+int Arreglo::menor_prim(){
+    int men=arr[0];
+    for(int i=0;i<len;i++){
+        if(esPrim(arr[i])==true){
+            if(arr[i]<men){
+                men=arr[i];}}
+    }
+    return men;
+}
+
+void Arreglo::ordenar(){
+
+}
+
+int Arreglo::sumar(){
+    int sum=0;
+    for(int i=0;i<len;i++){
+        sum+=arr[i];}
+    return sum;
+}
+
+void Arreglo::invertir(){
+
 }
