@@ -12,15 +12,17 @@ class Arreglo
 		Arreglo(int lenght){
 			arr=new int[lenght];
 			len=lenght;}
+
         ~Arreglo(){
             delete[]arr;
             delete[]arr2;}
 
 		void anadir(int x);
-		void eliminar(int x);
+		void insertar(int pos,int x);
+		void eliminar(int pos);
 		void vaciar();
-        void imprimir();
+        void mostrar();
 
 };
 
-#endif // ARREGLO_H
+#endif 
