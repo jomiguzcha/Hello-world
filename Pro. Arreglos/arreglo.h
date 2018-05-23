@@ -24,6 +24,16 @@ class Arreglo
 		void vaciar();
         void mostrar();
 
+        int mayor();
+        int menor();
+        float promedio();
+        bool esPrim(int pos);
+        int mayor_prim();
+        int menor_prim();
+        void ordenar();
+        int sumar();
+        void invertir();
+
 };
 
 #endif
