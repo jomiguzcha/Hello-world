@@ -14,8 +14,7 @@ class Arreglo
 			len=lenght;}
 
         ~Arreglo(){
-            delete[]arr;
-            delete[]arr2;}
+            delete[]arr;}
 
         void iniciar();
 		void anadir(int x);
