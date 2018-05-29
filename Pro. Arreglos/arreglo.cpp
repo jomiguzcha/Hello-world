@@ -140,8 +140,8 @@ int Arreglo::menor_prim(){
 }
 
 void Arreglo::ordenar(){
-    for(int i=1;i<len;i++){
-    	for(int j=0;j<len-1;j++){
+    for(int i=0;i<len;i++){
+    	for(int j=0;j<len;j++){
 			 if(arr[j]>arr[j+1]){
 			 	int c=0;
 			 	c=arr[j];
