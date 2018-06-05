@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1528207591 source:c:\users\alumno-g\trabajo\main.cpp
+	<iostream>
+	"Punto.h"
+
+1528207409 c:\users\alumno-g\trabajo\include\punto.h
+
+1528207502 source:c:\users\alumno-g\trabajo\src\punto.cpp
+	"Punto.h"
+	<iostream>
+
